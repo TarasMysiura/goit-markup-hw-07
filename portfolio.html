@@ -14,19 +14,33 @@
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style7.css">
     <title>Portfolio</title>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <a class="logo logo-header link" href="./index.html"><span class="logo-span">Web</span>Studio</a>
+            <a class="logo link" href="./index.html"><span class="logo-span">Web</span>Studio</a>
+    
+            <button type="button" class="mobile-btn-menu js-open-menu js-menu-container">
+                <svg class="icon-menu" width="32" height="22" aria-label="Select mobile menu">
+                    <use href="./images/icons.svg#menu_btn"></use>
+                </svg>
+    
+            </button>
+    
+            <button type="button" class="mobile-btn-close js-close-menu">
+                <svg class="icon-close" width="8" height="8" aria-label="Select mobile menu close">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <!-- </button> -->
             <nav class="navigation">
                 <ul class="list">
-                    <li class="item"><a class="link" href="./index.html">Studio</a>
+                    <li class="item"><a class="link current" href="./index.html">Studio</a>
                     </li>
-                    <li class="item"><a class="link current" href="./portfolio.html">Portfolio</a></li>
+                    <li class="item"><a class="link" href="./portfolio.html">Portfolio</a></li>
                     <li class="item"><a class="link" href="#">Contacts</a></li>
                 </ul>
             </nav>
@@ -36,7 +50,12 @@
                         111-11-11</a></li>
             </ul>
         </div>
+        <div class="js-menu-container">
+    
+        </div>
+    
     </header>
+
     <main class="portfolio">
         <section class="gallery">
             <div class="container">
@@ -275,6 +294,7 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/modile-menu.js"></script>
 </body>
 
 </html>

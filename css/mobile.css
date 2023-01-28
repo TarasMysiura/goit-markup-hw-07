@@ -1,0 +1,28 @@
+@media screen and (min-width: 480px) {
+  .container {
+    width: 428px;
+  }
+/* =================PREFERENCE==================== */
+
+
+
+
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 767px){
+/* =================PREFERENCE==================== */
+  
+  .preference .title {
+    text-align: center;
+  
+}
+  
+
+
+}

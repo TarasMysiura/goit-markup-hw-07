@@ -72,6 +72,23 @@ body {
   margin: 0 auto;
   width: 100%;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 428px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1158px;
+  }
+}
 
 .header {
   height: 70px;
@@ -158,6 +175,7 @@ body {
   transform: translate(-50%, -50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .mobile-btn-menu.is-open .icon-menu {
   display: none;
@@ -359,6 +377,7 @@ body {
 
 /*------------------------------------------*/
 
+.preference .title,
 .doing .title,
 .team .title,
 .customers .title {
@@ -389,46 +408,104 @@ body {
 }
 /*------------PREFERENCE------------------*/
 
-
 .preference {
-  padding-top: 96px;
-  padding-bottom: 96px;
-  /* padding: 96px 16px; */
-}
-.preference .list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 72px;
+  padding: 96px 16px;
 }
 .preference .title {
   margin-bottom: 8px;
-  font-weight: var(--font-weight-roboto-700);
-  font-size: 36px;
-  line-height: calc(40 / 36);
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--color-title);
-}
-.preference .text {
-  font-weight: var(--font-weight-roboto-500);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--color-text);
 }
 
-.icon-logo {
-  display: none;
+@media screen and (min-width: 480px) {
+  .preference .item {
+    width: 396px;
+  }
+  .icon-logo {
+    display: none;
+  }
+
+  .preference .item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+  .preference .list .title {
+    text-align: center;
+  }
+  .preference .text {
+    font-weight: var(--font-weight-roboto-500);
+  }
 }
-/* ===================================== */
 
+@media screen and (min-width: 768px) {
+  .preference .item {
+    width: 356px;
+    margin-bottom: 0;
+  }
+  .preference .item:first-child .text {
+    padding-right: 40px;
+  }
+  .preference .item:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .preference .list .title {
+    text-align: left;
+  }
+  .preference .list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+}
 
-/*------------GOING------------------*/
+@media screen and (min-width: 1200px) {
+  .icon-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 24px 100px; */
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background: var(--color-light);
+  }
+
+  .preference {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .preference .item {
+    width: 264px;
+    margin-bottom: 0;
+  }
+  .preference .item:first-child .text {
+    padding-right: 0;
+  }
+
+  .preference .title {
+    font-weight: var(--font-weight-roboto-500);
+    margin-bottom: 8px;
+    /* width: 264px; */
+  }
+  .preference .text {
+    font-weight: 400;
+  }
+  .preference .list {
+    display: flex;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    column-gap: 0;
+    gap: 24px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .doing {
     display: none;
   }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1200px) {
 }
 
 /*------------OUR TEAM------------------*/
@@ -446,7 +523,7 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
-.team > .container > .list > .item {
+.team > .container > .list> .item{
   width: 264px;
   margin-left: auto;
   margin-right: auto;
@@ -578,7 +655,7 @@ body {
   margin-right: auto;
 }
 .footer .logo-text,
-.footer .container-wrap {
+.footer .container-wrap{
   margin-bottom: 72px;
 }
 
@@ -794,6 +871,19 @@ body {
 .list-card .item:nth-child(n + 7) {
   margin-bottom: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------MODAL------------ */
 
@@ -1038,7 +1128,28 @@ textarea:active {
   background-color: var(--color-btn-active);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 480px) {
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -1046,3 +1157,4 @@ textarea:active {
 
 @media screen and (min-width: 1200px) {
 }
+

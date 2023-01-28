@@ -1,0 +1,37 @@
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  /* =================PREFERENCE==================== */
+  .preference .item {
+    width: 356px;
+    margin-bottom: 0;
+  }  
+  .preference .list .title {
+    text-align: left;
+  }
+  .preference .list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+  }
+/* ===================================== */
+
+
+
+
+
+}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+/* =================PREFERENCE==================== */
+  
+  .preference .item:first-child .text {
+    padding-right: 40px;
+  }
+  .preference .item:last-child .text{ 
+    padding-right: 5px;
+  }
+  /* ===================================== */
+
+
+}
