@@ -2,11 +2,130 @@
   .container {
     width: 768px;
   }
+  /* ===================HEADER================== */
+  .header .container {
+    
+    width: 768px;
+    display: flex;
+    gap: 120px;
+  }
+  .mobile-btn-menu,
+  .mobile-btn-close {
+    display: none;
+  }
+
+  .navigation,
+  .contacts {
+    display: block;
+  }
+  .navigation {
+    margin-right: auto;
+  }
+  .navigation .list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .navigation .item {
+    position: relative;
+    padding-bottom: 24px;
+  }
+  .navigation .link {
+    font-weight: var(--font-weight-roboto-500);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-title);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .link.current {
+    color: var(--color-btn-defult);
+  }
+  .link.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-btn-defult);
+    border-radius: 2px;
+  }
+
+  .mobile-nav {
+    display: flex;
+    gap: 118px;
+  }
+
+  .contacts .email {
+    margin-bottom: 4px;
+  }
+  .contacts .email,
+  .contacts .tel {
+    display: block;
+
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .navigation .link:hover,
+  .contacts .email:hover,
+  .contacts .tel:hover,
+  .navigation .link:focus,
+  .contacts .email:focus,
+  .contacts .tel:focus {
+    color: var(--color-btn-defult);
+  }
+
+  @media screen and (max-width: 767px) {
+    .mobile-nav {
+      display: none;
+    }
+  }
+  /* =========================================== */
+  /*------------HERO------------------*/
+  .hero {
+    background-image: var(--bg-gradient), url(../images/hero-bg-tab.jpg);
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .hero {
+    max-width: 768px;
+    padding-bottom: 108px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--bg-gradient), url(../images/hero-bg-tab-2x.jpg);
+    }
+  }
+  .hero .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hero .title {
+    font-size: 56px;
+    line-height: calc(60 / 56);
+    margin-bottom: 40px;
+    width: 496px;
+  }
+
+  /* -------------------------------- */
   /* =================PREFERENCE==================== */
   .preference .item {
     width: 356px;
     margin-bottom: 0;
-  }  
+  }
   .preference .list .title {
     text-align: left;
   }
@@ -15,23 +134,70 @@
     flex-wrap: wrap;
     column-gap: 24px;
   }
-/* ===================================== */
+  /* ===================================== */
+  /* ============OUR TEAM================= */
+  .team .list {
+    column-gap: 24px;
+  }
 
+  /* ---------customers-------------- */
 
+  .customers .list {
+    column-gap: 24px;
+  }
 
+  .customers .item {
+    width: 168px;
+  }
+  .customers .link {
+    padding: 16px 32px;
+  }
+  /* ----------------------------------- */
+  /* --------------FOOTER-------------- */
+  .footer {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .footer .container {
+    width: 768px;
+    gap: 72px;
+    padding-left: 108px;
+    justify-content: left;
+  }
+  .footer .container-wrap {
+    gap: 24px;
+  }
+  .footer .logo {
+    text-align: left;
+  }
 
+  .footer .text {
+    width: 264px;
+  }
+  .subscribe-wrap {
+    display: flex;
+    gap: 24px;
+  }
+  .subscribe-label {
+    text-align: left;
+  }
+  .subscribe-input {
+    width: 264px;
+    padding: 8px 16px;
+    margin-bottom: 0;
+  }
 
+  /* -------------------------------- */
 }
-@media screen and (min-width: 768px) and (max-width: 1199px){
-/* =================PREFERENCE==================== */
-  
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /* =================PREFERENCE==================== */
+
   .preference .item:first-child .text {
     padding-right: 40px;
   }
-  .preference .item:last-child .text{ 
+  .preference .item:last-child .text {
     padding-right: 5px;
   }
   /* ===================================== */
-
-
 }

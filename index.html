@@ -26,23 +26,73 @@
 </head>
 
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container">
             <a class="logo link" href="./index.html"><span class="logo-span">Web</span>Studio</a>
 
             <button type="button" class="mobile-btn-menu js-open-menu js-menu-container">
                 <svg class="icon-menu" width="32" height="22" aria-label="Select mobile menu">
-                    <use href="./images/icons.svg#menu_btn"></use>
+                    <use href="./images/icons.svg#icon-hamburger"></use>
                 </svg>
 
             </button>
 
-            <button type="button" class="mobile-btn-close js-close-menu">
-                <svg class="icon-close" width="8" height="8" aria-label="Select mobile menu close">
-                    <use href="./images/icons.svg#icon-close"></use>
-                </svg>
-            </button>
-            
+            <div class="mob-menu">
+                <div class="container">
+                    <button type="button" class="mobile-btn-close js-close-menu">
+                        <svg class="icon-close" width="8" height="8" aria-label="Select mobile menu close">
+                            <use href="./images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <div class="mob-nav">
+                        <nav class="mob-navigation">
+                            <ul class="list">
+                                <li class="item"><a class="link current" href="./index.html">Studio</a>
+                                </li>
+                                <li class="item"><a class="link" href="./portfolio.html">Portfolio</a></li>
+                                <li class="item"><a class="link" href="#">Contacts</a></li>
+                            </ul>
+                        </nav>
+                        <ul class="mob-contacts list">
+                            <li class="item"><a class="email link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                            <li class="item"><a class="tel link" href="tel:+110001111111">+11 (000)
+                                    111-11-11</a></li>
+                        </ul>
+                    </div>
+                    <ul class="mob-soc-list list">
+                        <li class="soc-item">
+                            <a href="" class="soc-link link">
+                                <svg class="soc-icon" width="16" height="16">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="soc-item">
+                            <a href="" class="soc-link link">
+                                <svg class="soc-icon" width="16" height="16">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="soc-item">
+                            <a href="" class="soc-link link">
+                                <svg class="soc-icon" width="16" height="16">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="soc-item">
+                            <a href="" class="soc-link link">
+                                <svg class="soc-icon" width="16" height="16">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="mobile-nav">
                 <nav class="navigation">
                     <ul class="list">
@@ -63,15 +113,15 @@
 
         </div>
 
-    </header> -->
+    </header>
 
     <main class="main">
-        <!-- <section class="hero">
+        <section class="hero">
             <div class="container">
                 <h1 class="title">Effective Solutions for Your Business</h1>
                 <button data-modal-open class="btn" type="button">Order Service</button>
             </div>
-        </section> -->
+        </section>
         <section class="preference">
             <div class="container">
                 <h2 class="visually-hidden">Preference</h2>
@@ -123,27 +173,31 @@
                 </ul>
             </div>
         </section>
-        <!-- <section class="doing">
+        <section class="doing">
             <div class="container">
                 <h2 class="title">What are we doing</h2>
                 <ul class="list">
-                    <li class="item link"><img class="image" src="./images/monitor.jpg" alt="Monitor" width="360"
-                            height="300"></li>
-                    <li class="item link"><img class="image" src="./images/mobile.jpg" alt="Mobile phone" width="360"
-                            height="300">
+                    <li class="item link"><img class="image"
+                            srcset="./images/monitor.jpg 360w, ./images/monitor-2x.jpg 720w" src="./images/monitor.jpg"
+                            alt="Monitor" sizes="360px"></li>
+                    <li class="item link"><img class="image"
+                            srcset="./images/mobile.jpg 360w, ./images/mobile-2x.jpg 720w" src="./images/mobile.jpg"
+                            alt="Mobile phone" sizes="360px">
                     </li>
-                    <li class="item link"><img class="image" src="./images/mobile-phone-in-hand.jpg"
-                            alt="Mobile phone in hand" width="360" height="300"></li>
+                    <li class="item link"><img class="image"
+                            srcset="./images/mobile-phone-in-hand.jpg 360w, ./images/mobile-phone-in-hand-2x.jpg 720w"
+                            src="./images/mobile-phone-in-hand.jpg" alt="Mobile phone in hand" sizes="360px"></li>
                 </ul>
             </div>
-        </section> -->
+        </section>
         <section class="team">
             <div class="container">
                 <h2 class="title">Our Team</h2>
                 <ul class="list">
                     <li class="item link">
-                        <img class="photo" src="./images/photo-mark-guerrero.jpg" alt="Photo Mark Guerrero" width="264"
-                            height="260">
+                        <img class="photo"
+                            srcset="./images/photo-mark-guerrero.jpg 264w, ./images/photo-mark-guerrero-2x.jpg 528w"
+                            src="./images/photo-mark-guerrero.jpg" alt="Photo Mark Guerrero" sizes="264px">
                         <div class="name">
                             <h3 class="title">Mark Guerrero</h3>
                             <p class="text">Product Designer</p>
@@ -180,8 +234,9 @@
                         </div>
                     </li>
                     <li class="item link">
-                        <img class="photo" src="./images/photo-tom-ford.jpg" alt="Photo Tom Ford" width="264"
-                            height="260">
+                        <img class="photo"
+                            srcset="./images/photo-tom-ford.jpg 264w, ./images/photo-tom-ford-2x.jpg 528w"
+                            src="./images/photo-tom-ford.jpg" alt="Photo Tom Ford" sizes="264px">
                         <div class="name">
                             <h3 class="title">Photo Tom Ford</h3>
                             <p class="text">Frontend Developer</p>
@@ -218,8 +273,9 @@
                         </div>
                     </li>
                     <li class="item link">
-                        <img class="photo" src="./images/photo-camila-garcia.jpg" alt="Photo Camila Garcia" width="264"
-                            height="260">
+                        <img class="photo"
+                            srcset="./images/photo-camila-garcia.jpg 264w, ./images/photo-camila-garcia-2x.jpg 528w"
+                            src="./images/photo-camila-garcia.jpg" alt="Photo Camila Garcia" sizes="264px">
                         <div class="name">
                             <h3 class="title">Camila Garcia</h3>
                             <p class="text">Marketing</p>
@@ -256,8 +312,9 @@
                         </div>
                     </li>
                     <li class="item link">
-                        <img class="photo" src="./images/photo-daniel-wilson.jpg" alt="Photo Daniel Wilson" width="264"
-                            height="260">
+                        <img class="photo"
+                            srcset="./images/photo-daniel-wilson.jpg 264w, ./images/photo-daniel-wilson-2x.jpg 528w"
+                            src="./images/photo-daniel-wilson.jpg" alt="Photo Daniel Wilson" sizes="264px">
                         <div class="name">
                             <h3 class="title">Daniel Wilson</h3>
                             <p class="text">UI Designer</p>
@@ -297,7 +354,7 @@
             </div>
 
         </section>
-        <!-- <section class="customers">
+        <section class="customers">
             <div class="container">
                 <h2 class="title">Customers</h2>
                 <ul class="list">
@@ -346,10 +403,10 @@
 
                 </ul>
             </div>
-        </section> -->
+        </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="container-wrap">
                 <div class="logo-text">
@@ -403,7 +460,7 @@
                 </div>
             </form>
         </div>
-    </footer> -->
+    </footer>
 
     <!-- <div class="backdrop is-hidden" data-modal>
         <div class="modal">

@@ -2,6 +2,14 @@
   .container {
     width: 428px;
   }
+/*------------HERO------------------*/
+.hero .container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+
+
 /* =================PREFERENCE==================== */
 
 
@@ -16,9 +24,12 @@
 }
 
 @media screen and (max-width: 767px){
-/* =================PREFERENCE==================== */
-  
-  .preference .title {
+/* =================PREFERENCE==================== */  
+  .header .container {  
+  max-width: 480px;  
+  }
+
+.preference .title {
     text-align: center;
   
 }
