@@ -54,7 +54,7 @@
   .contacts .email {
     margin-bottom: 0;
   }
-  .contacts{
+  .contacts {
     display: flex;
     align-items: center;
     gap: 40px;
@@ -116,7 +116,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 24px 100px; */
     margin-bottom: 8px;
     border-radius: 4px;
     background: var(--color-light);
@@ -203,19 +202,19 @@
     padding-right: 15px;
     display: flex;
     gap: 80px;
-    /* margin: 0; */
     flex-wrap: nowrap;
-    /* justify-content: left; */
   }
   .footer .container-wrap {
     flex-wrap: nowrap;
     gap: 120px;
   }
 
-  /* .footer .logo-text,
-.footer .container-wrap {
-  margin-bottom: 72px;
-} */
-
   /* -------------------------------- */
+  /*------------PORTFOLIO------------------*/
+  
+  .list-card .item {
+    width: 360px;
+  }
+
+  /* ---------------------------------------- */
 }

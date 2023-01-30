@@ -4,7 +4,6 @@
   }
   /* ===================HEADER================== */
   .header .container {
-    
     width: 768px;
     display: flex;
     gap: 120px;
@@ -25,6 +24,9 @@
     display: flex;
     gap: 40px;
     align-items: center;
+  }
+  .mob-menu {
+    display: none;
   }
 
   .navigation .item {
@@ -188,6 +190,22 @@
   }
 
   /* -------------------------------- */
+  /*------------PORTFOLIO------------------*/
+  .portfolio .list-btn {
+    justify-content: center;
+
+    margin-bottom: 48px;
+  }
+  .list-card {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .list-card .item {
+    width: 356px;
+  }
+
+  /* ---------------------------------------- */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {

@@ -14,7 +14,11 @@
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
-    <link rel="stylesheet" href="./css/style7.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+
     <title>Portfolio</title>
 </head>
 
@@ -22,40 +26,90 @@
     <header class="header">
         <div class="container">
             <a class="logo link" href="./index.html"><span class="logo-span">Web</span>Studio</a>
-    
-            <button type="button" class="mobile-btn-menu js-open-menu js-menu-container">
-                <svg class="icon-menu" width="32" height="22" aria-label="Select mobile menu">
-                    <use href="./images/icons.svg#menu_btn"></use>
-                </svg>
-    
-            </button>
-    
-            <button type="button" class="mobile-btn-close js-close-menu">
-                <svg class="icon-close" width="8" height="8" aria-label="Select mobile menu close">
-                    <use href="./images/icons.svg#icon-close"></use>
-                </svg>
-            </button>
-            <!-- </button> -->
-            <nav class="navigation">
-                <ul class="list">
-                    <li class="item"><a class="link current" href="./index.html">Studio</a>
-                    </li>
-                    <li class="item"><a class="link" href="./portfolio.html">Portfolio</a></li>
-                    <li class="item"><a class="link" href="#">Contacts</a></li>
-                </ul>
-            </nav>
-            <ul class="contacts list">
-                <li class="item"><a class="email link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                <li class="item"><a class="tel link" href="tel:+110001111111">+11 (000)
-                        111-11-11</a></li>
-            </ul>
-        </div>
-        <div class="js-menu-container">
-    
-        </div>
-    
-    </header>
 
+            <button type="button" class="mobile-btn-menu js-open-menu" data-menu-open>
+                <svg class="icon-menu" width="32" height="22" aria-label="Select mobile menu">
+                    <use href="./images/icons.svg#icon-hamburger"></use>
+                </svg>
+            </button>
+
+            <div class="mob-menu js-menu-container is-hidden" data-menu>
+                <div class="container">
+                    <button type="button" class="mobile-btn-close js-close-menu" data-menu-close>
+                        <svg class="icon-close" width="8" height="8" aria-label="Select mobile menu close">
+                            <use href="./images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <div class="mob-nav">
+                        <nav class="mob-navigation">
+                            <ul class="list">
+                                <li class="item"><a class="link " href="./index.html">Studio</a>
+                                </li>
+                                <li class="item"><a class="link current" href="./portfolio.html">Portfolio</a></li>
+                                <li class="item"><a class="link" href="#">Contacts</a></li>
+                            </ul>
+                        </nav>
+                        <div class="mobile-contacts">
+                            <ul class="mob-contacts list">
+                                <li class="item"><a class="email link"
+                                        href="mailto:info@devstudio.com">info@devstudio.com</a>
+                                </li>
+                                <li class="item"><a class="tel link" href="tel:+110001111111">+11 (000)
+                                        111-11-11</a></li>
+                            </ul>
+
+                            <ul class="mob-soc-list list">
+                                <li class="soc-item">
+                                    <a href="" class="soc-link link">
+                                        <svg class="soc-icon" width="16" height="16">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="soc-item">
+                                    <a href="" class="soc-link link">
+                                        <svg class="soc-icon" width="16" height="16">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="soc-item">
+                                    <a href="" class="soc-link link">
+                                        <svg class="soc-icon" width="16" height="16">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="soc-item">
+                                    <a href="" class="soc-link link">
+                                        <svg class="soc-icon" width="16" height="16">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-nav">
+                <nav class="navigation">
+                    <ul class="list">
+                        <li class="item"><a class="link" href="./index.html">Studio</a>
+                        </li>
+                        <li class="item"><a class="link current" href="./portfolio.html">Portfolio</a></li>
+                        <li class="item"><a class="link" href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <ul class="contacts list">
+                    <li class="item"><a class="email link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li class="item"><a class="tel link" href="tel:+110001111111">+11 (000)
+                            111-11-11</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <main class="portfolio">
         <section class="gallery">
             <div class="container">
@@ -75,7 +129,19 @@
                     <li class="item link">
                         <a href="#" class="link">
                             <div class="product">
-                                <img class="image" src="./images/portfolio/app-img-1.jpg" alt="Dising app" width="360" height="300">
+                                <picture class="image">
+                                    <source
+                                        srcset="./images/portfolio/desktop/app-img-desktop-1.jpg 1x, ./images/portfolio/desktop/app-img-desktop-1-2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/app-img-tablet-1.jpg 1x, ./images/portfolio/tablet/app-img-tablet-1-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/app-img-mobile-1.jpg 1x, ./images/portfolio/mobile/app-img-mobile-1-2x.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="image" src="./images/portfolio/app-img-1.jpg" alt="Dising app"
+                                        width="360" height="300">
+                                </picture>
                                 <div class="overlay">
                                     <p class="text">
                                         14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -92,8 +158,19 @@
                     <li class="item link">
                         <a href="#" class="link">
                             <div class="product">
-                                <img class="image" src="./images/portfolio/marketing-img-1.jpg" alt="QR code on phone"
-                                    width="360" height="300">
+                                <picture class="image">
+                                    <source
+                                        srcset="./images/portfolio/desktop/marketing-img-desktop-1.jpg 1x, ./images/portfolio/desktop/marketing-img-desktop-1-2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/marketing-img-tablet-1.jpg 1x, ./images/portfolio/tablet/marketing-img-tablet-1-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/marketing-img-mobile-1.jpg 1x, ./images/portfolio/mobile/marketing-img-mobile-1-2x.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="image" src="./images/portfolio/marketing-img-1.jpg"
+                                        alt="QR code on phone" width="360" height="300">
+                                </picture>
                                 <div class="overlay">
                                     <p class="text">
                                         14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -110,8 +187,19 @@
                     <li class="item link">
                         <a href="#" class="link">
                             <div class="product">
-                                <img class="image" src="./images/portfolio/app-img-2.jpg" alt="Noutbook and phone"
-                                width="360" height="300">
+                                <picture class="image">
+                                    <source
+                                        srcset="./images/portfolio/desktop/app-img-desktop-2.jpg 1x, ./images/portfolio/desktop/app-img-desktop-2-2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/app-img-tablet-2.jpg 1x, ./images/portfolio/tablet/app-img-tablet-2-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/app-img-mobile-2.jpg 1x, ./images/portfolio/mobile/app-img-mobile-2-2x.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="image" src="./images/portfolio/app-img-2.jpg" alt="Noutbook and phone"
+                                        width="360" height="300">
+                                </picture>
                                 <div class="overlay">
                                     <p class="text">
                                         14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -128,8 +216,19 @@
                     <li class="item link">
                         <a href="#" class="link">
                             <div class="product">
-                                <img class="image" src="./images/portfolio/marketing-img-2.jpg" alt="Behind the wheel"
-                                width="360" height="300">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desktop/marketing-img-desktop-2.jpg 1x, ./images/portfolio/desktop/marketing-img-desktop-2-2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/marketing-img-tablet-2.jpg 1x, ./images/portfolio/tablet/marketing-img-tablet-2-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/marketing-img-mobile-2.jpg 1x, ./images/portfolio/mobile/marketing-img-mobile-2-2x.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="image" src="./images/portfolio/marketing-img-2.jpg"
+                                        alt="Behind the wheel" width="360" height="300">
+                                </picture>
                                 <div class="overlay">
                                     <p class="text">
                                         14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -146,8 +245,19 @@
                     <li class="item link">
                         <a href="#" class="link">
                             <div class="product">
-                                <img class="image" src="./images/portfolio/desing-img-1.jpg"
-                                alt="Desing for phone Blue moon" width="360" height="300">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desktop/design-img-desktop-1.jpg 1x, ./images/portfolio/desktop/design-img-desktop-1-2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/design-img-tablet-1.jpg 1x, ./images/portfolio/tablet/design-img-tablet-1-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/design-img-mobile-1.jpg 1x, ./images/portfolio/mobile/design-img-mobile-1-2x.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="image" src="./images/portfolio/design-img-1.jpg"
+                                        alt="Desing for phone Blue moon" width="360" height="300">
+                                </picture>
                                 <div class="overlay">
                                     <p class="text">
                                         14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -164,14 +274,26 @@
                     <li class="item link">
                         <a href="#" class="link">
                             <div class="product">
-                                <img class="image" src="./images/portfolio/marketing-img-3.jpg" alt="Girl" width="360" height="300">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desktop/marketing-img-desktop-3.jpg 1x, ./images/portfolio/desktop/marketing-img-desktop-3-2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/marketing-img-tablet-3.jpg 1x, ./images/portfolio/tablet/marketing-img-tablet-3-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/marketing-img-mobile-3.jpg 1x, ./images/portfolio/mobile/marketing-img-mobile-3-2x.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="image" src="./images/portfolio/marketing-img-3.jpg" alt="Girl"
+                                        width="360" height="300">
+                                </picture>
                                 <div class="overlay">
                                     <p class="text">
                                         14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
                                         Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                                     </p>
                                 </div>
-                            </div>                            
+                            </div>
                             <div class="name">
                                 <h3 class="title">Online Courses</h3>
                                 <p class="text">Marketing</p>
@@ -181,8 +303,19 @@
                     <li class="item link">
                         <a href="#" class="link">
                             <div class="product">
-                                <img class="image" src="./images/portfolio/desing-img-2.jpg" alt="Scrins mobile app"
-                                width="360" height="300">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desktop/design-img-desktop-2.jpg 1x, ./images/portfolio/desktop/design-img-desktop-2-2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/design-img-tablet-2.jpg 1x, ./images/portfolio/tablet/design-img-tablet-2-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/design-img-mobile-2.jpg 1x, ./images/portfolio/mobile/design-img-mobile-2-2x.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="image" src="./images/portfolio/design-img-2.jpg" alt="Scrins mobile app"
+                                        width="360" height="300">
+                                </picture>
                                 <div class="overlay">
                                     <p class="text">
                                         14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -199,8 +332,20 @@
                     <li class="item link">
                         <a href="#" class="link">
                             <div class="product">
-                                <img class="image" src="./images/portfolio/web-site-img-1.jpg" alt="Bag of fruit"
-                                width="360" height="300">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desktop/web-img-desktop-1.jpg 1x, ./images/portfolio/desktop/web-img-desktop-1-2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/web-img-tablet-1.jpg 1x, ./images/portfolio/tablet/web-img-tablet-1-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/web-img-mobile-1.jpg 1x, ./images/portfolio/mobile/web-img-mobile-1-2x.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="image" src="./images/portfolio/web-site-img-1.jpg" alt="Bag of fruit"
+                                        width="360" height="300">
+                                </picture>
+
                                 <div class="overlay">
                                     <p class="text">
                                         14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -217,8 +362,19 @@
                     <li class="item link">
                         <a href="#" class="link">
                             <div class="product">
-                                 <img class="image" src="./images/portfolio/web-site-img-2.jpg" alt="Designer coffee"
-                                width="360" height="300">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desktop/web-img-desktop-2.jpg 1x, ./images/portfolio/desktop/web-img-desktop-2-2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/web-img-tablet-2.jpg 1x, ./images/portfolio/tablet/web-img-tablet-2-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/web-img-mobile-2.jpg 1x, ./images/portfolio/mobile/web-img-mobile-2-2x.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="image" src="./images/portfolio/web-site-img-2.jpg" alt="Designer coffee"
+                                        width="360" height="300">
+                                </picture>
                                 <div class="overlay">
                                     <p class="text">
                                         14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -279,7 +435,7 @@
                     </ul>
                 </div>
             </div>
-            <form name="subscribe" class="subscribe" autocomplete="on" >
+            <form name="subscribe" class="subscribe" autocomplete="on">
                 <label for="subscribe" class="subscribe-label">Subscribe</label>
                 <div class="subscribe-wrap">
                     <input type="email" name="name" id="subscribe" class="subscribe-input" placeholder="Email" required>
@@ -294,7 +450,8 @@
     </footer>
 
     <script src="./js/modal.js"></script>
-    <script src="./js/modile-menu.js"></script>
+    <!-- <script src="./js/mobile-menu.js"></script> -->
+    <script src="./js/mob-menu.js"></script>
 </body>
 
 </html>
