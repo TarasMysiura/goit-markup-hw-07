@@ -56,7 +56,7 @@
     border-radius: 2px;
   }
 
-  .mobile-nav {
+  .nav {
     display: flex;
     gap: 118px;
   }
@@ -86,7 +86,7 @@
   }
 
   @media screen and (max-width: 767px) {
-    .mobile-nav {
+    .nav {
       display: none;
     }
   }
@@ -188,6 +188,10 @@
     padding: 8px 16px;
     margin-bottom: 0;
   }
+  .subscribe-btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   /* -------------------------------- */
   /*------------PORTFOLIO------------------*/
@@ -206,6 +210,19 @@
   }
 
   /* ---------------------------------------- */
+  /* ================MODAL================== */
+  .modal {
+    max-width: 408px;
+    width: 408px;
+    padding-top: 72px;
+    padding-bottom: 24px;
+  }
+  .modal .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* ======================================= */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
